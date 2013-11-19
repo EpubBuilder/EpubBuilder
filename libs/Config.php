@@ -3,15 +3,15 @@
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
- * EpubBuilder‚Ìİ’èƒNƒ‰ƒX
+ * EpubBuilderã®è¨­å®šã‚¯ãƒ©ã‚¹
  *
- * EpubBuilder‚ÍƒNƒ‰ƒX–¼EpubBuilder‚ÆAƒl[ƒ€ƒXƒy[ƒXAEpubBuilder‚ğg—p‚µ‚Ü‚·B
+ * EpubBuilderã¯ã‚¯ãƒ©ã‚¹åEpubBuilderã¨ã€ãƒãƒ¼ãƒ ã‚¹ãƒšãƒ¼ã‚¹ã€EpubBuilderã‚’ä½¿ç”¨ã—ã¾ã™ã€‚
  *
  * PHP versions 5.3
  *
  * LICENSE: The following is a BSD 2-Clause license template.
- * To generate your own license, 
- * change the values of OWNER and YEAR from their original values as given here, 
+ * To generate your own license,
+ * change the values of OWNER and YEAR from their original values as given here,
  * and substitute your own.
  * Note: see also the BSD-3-Clause license.URI:
  * http://opensource.org/licenses/BSD-2-Clause
@@ -31,14 +31,14 @@
 namespace EpubBuilder;
 
 /**
- * EpubBuilder‚Ìİ’èƒNƒ‰ƒX
+ * EpubBuilderã®è¨­å®šã‚¯ãƒ©ã‚¹
  *
- * EpubBuilder‚Ìİ’è‚ğ‹LÚ‚·‚éƒNƒ‰ƒX‚Å‚·BŠî–{“I‚É‚Í©“®æ“¾‚Æ‚È‚Á‚Ä‚¢‚Ü‚·B
+ * EpubBuilderã®è¨­å®šã‚’è¨˜è¼‰ã™ã‚‹ã‚¯ãƒ©ã‚¹ã§ã™ã€‚åŸºæœ¬çš„ã«ã¯è‡ªå‹•å–å¾—ã¨ãªã£ã¦ã„ã¾ã™ã€‚
  *
  *
- * ƒTƒ“ƒvƒ‹ƒR[ƒh‚âAƒ}ƒjƒ…ƒAƒ‹‚ÉŠÖ‚µ‚Ä‚Í
+ * ã‚µãƒ³ãƒ—ãƒ«ã‚³ãƒ¼ãƒ‰ã‚„ã€ãƒãƒ‹ãƒ¥ã‚¢ãƒ«ã«é–¢ã—ã¦ã¯
  * https://github.com/EpubBuilder/EpubBuilder/wiki
- * ‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+ * ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
  *
  *
  * @category   EpubBuilder
@@ -56,7 +56,7 @@ class Config
 
 
     /**
-     * ì‹ÆƒfƒBƒŒƒNƒgƒŠ
+     * ä½œæ¥­ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
      *
      * @access      public
      * @var         string
@@ -65,7 +65,7 @@ class Config
 
 
     /**
-     * ƒƒ^ƒf[ƒ^‚ª“ü‚Á‚Ä‚¢‚éƒfƒBƒŒƒNƒgƒŠ
+     * ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ãŒå…¥ã£ã¦ã„ã‚‹ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
      *
      * @access      public
      * @var         string
@@ -73,7 +73,7 @@ class Config
     public $meta_data_path;
 
     /**
-     * ƒTƒ“ƒvƒ‹ƒf[ƒ^‚ÌƒpƒX
+     * ã‚µãƒ³ãƒ—ãƒ«ãƒ‡ãƒ¼ã‚¿ã®ãƒ‘ã‚¹
      *
      * @access      public
      * @var         string
@@ -81,7 +81,7 @@ class Config
     public $sample_data_path;
 
     /**
-     * ƒ†ƒj[ƒN‚ÈƒLƒ…[ID
+     * ãƒ¦ãƒ‹ãƒ¼ã‚¯ãªã‚­ãƒ¥ãƒ¼ID
      *
      * @access      public
      * @var         string
@@ -90,7 +90,7 @@ class Config
 
 
     /**
-     * ‹K’èƒfƒBƒŒƒNƒgƒŠ(ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Å©“®’è‹`‚³‚ê‚Ü‚·B)
+     * è¦å®šãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª(ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§è‡ªå‹•å®šç¾©ã•ã‚Œã¾ã™ã€‚)
      *
      * @access      public
      * @var         any
@@ -98,7 +98,7 @@ class Config
     public $base_directory_path;
 
     /**
-     * +-- ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+     * +-- ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
      *
      * @access      public
      * @return      void
@@ -108,34 +108,34 @@ class Config
         $this->base_directory_path = realpath(dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR;
     }
     /* ----------------------------------------- */
-    
+
     /**
-     * +-- ‰Šú‰»
+     * +-- åˆæœŸåŒ–
      *
      * @access      public
      * @return      void
      */
     public function initialize()
     {
-        if (empty($this->working_directory_path) || is_dir($this->working_directory_path)) {
+        if (empty($this->working_directory_path) || !is_dir($this->working_directory_path)) {
             $this->working_directory_path = $this->base_directory_path.'tmp'.DIRECTORY_SEPARATOR;
         }
-        if (empty($this->meta_data_path) || is_dir($this->meta_data_path)) {
+        if (empty($this->meta_data_path) || !is_dir($this->meta_data_path)) {
             $this->meta_data_path = $this->base_directory_path.'MetaDatas'.DIRECTORY_SEPARATOR;
         }
-        
-        if (empty($this->sample_data_path) || is_dir($this->sample_data_path)) {
+
+        if (empty($this->sample_data_path) || !is_dir($this->sample_data_path)) {
             $this->sample_data_path = $this->base_directory_path.'Sample'.DIRECTORY_SEPARATOR;
         }
-        
+
         if (empty($this->cue_name)) {
             $this->cue_name = microtime(true).'-'.mt_rand(0,100000);
         }
     }
     /* ----------------------------------------- */
-    
+
     /**
-     * +-- V‹KƒLƒ…[‚Ì–¼‘O‚ğƒZƒbƒg‚·‚é
+     * +-- æ–°è¦ã‚­ãƒ¥ãƒ¼ã®åå‰ã‚’ã‚»ãƒƒãƒˆã™ã‚‹
      *
      * @access      public
      * @param       string $cue_name OPTIONAL:NULL

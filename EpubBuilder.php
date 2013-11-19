@@ -10,8 +10,8 @@
  * PHP versions 5.3
  *
  * LICENSE: The following is a BSD 2-Clause license template.
- * To generate your own license, 
- * change the values of OWNER and YEAR from their original values as given here, 
+ * To generate your own license,
+ * change the values of OWNER and YEAR from their original values as given here,
  * and substitute your own.
  * Note: see also the BSD-3-Clause license.URI:
  * http://opensource.org/licenses/BSD-2-Clause
@@ -75,7 +75,7 @@ class EpubBuilder
      * @var         \EpubBuilder\Driver\Common
      */
     private $Driver;
-    
+
     /**
      * factory用のDriver識別子
      *
@@ -84,7 +84,7 @@ class EpubBuilder
      * @var         String
      */
     const DRIVER_PEAR = 'Pear';
-    
+
     /**
      * factory用のDriver識別子
      *
@@ -93,7 +93,7 @@ class EpubBuilder
      * @var         String
      */
     const DRIVER_EXEC = 'ExecZip';
-    
+
     /**
      * factory用のDriverType識別子
      *
@@ -102,7 +102,7 @@ class EpubBuilder
      * @var         String
      */
     const TYPE_VERTICAL = 1;
-    
+
     /**
      * factory用のDriverType識別子
      *
@@ -111,7 +111,7 @@ class EpubBuilder
      * @var         String
      */
     const TYPE_HORIZONTAL = 2;
-    
+
     /**
      * factory用のDriverType識別子
      *
@@ -120,7 +120,7 @@ class EpubBuilder
      * @var         String
      */
     const NO_AUTO_PREPARE = 3;
-    
+
     /**
      * +-- コンストラクタ
      *
@@ -136,7 +136,7 @@ class EpubBuilder
         $this->config_obj->initialize();
     }
     /* ----------------------------------------- */
-    
+
     /**
      * +-- オブジェクトの作成
      *
@@ -157,7 +157,7 @@ class EpubBuilder
         return $_this;
     }
     /* ----------------------------------------- */
-    
+
     /**
      * +-- コンフィグオブジェクトを返す
      *
@@ -169,7 +169,7 @@ class EpubBuilder
         return $this->config_obj;
     }
     /* ----------------------------------------- */
-    
+
     /**
      * +-- 全てを開放して初期化する
      *
@@ -186,7 +186,7 @@ class EpubBuilder
         $this->executer(true);
     }
     /* ----------------------------------------- */
-    
+
     /**
      * +-- 実行オブジェクトを参照する
      *
@@ -220,7 +220,7 @@ class EpubBuilder
         if (!empty($this->Driver)) {
             $this->Driver->free();
         }
-        
+
         $class_name = '\EpubBuilder\Driver\\'.$driver;
         if (!class_exists($class_name, false)) {
             require $this->base_directory_path.'libs'.DIRECTORY_SEPARATOR.'Driver'.DIRECTORY_SEPARATOR.$driver.'.php';
@@ -229,13 +229,13 @@ class EpubBuilder
             throw new EpubBuilderException('undefined Driver : '.$driver, EpubBuilderException::CODE_INIT);
         }
         $this->Driver = new $class_name($this->config_obj);
-        if ($driver_type === self::NO_AUTO_PREPARE) {
+        if ($driver_type !== self::NO_AUTO_PREPARE) {
             $this->prepare($driver_type);
         }
         return $this->Driver;
     }
     /* ----------------------------------------- */
-    
+
     /**
      * +-- Driverの初期化を行う
      *
@@ -267,7 +267,7 @@ class EpubBuilder
         $this->executer()->addTitleContents($novel_title, $novel_sub_title, $author, $composer);
     }
     /* ----------------------------------------- */
-    
+
     /**
      * +-- テキストデータをセットする
      *
@@ -312,7 +312,7 @@ class EpubBuilder
         return $this->executer()->createSample();
     }
     /* ----------------------------------------- */
-    
+
     /* ----------------------------------------- */
 
     // +-- private methods
@@ -331,8 +331,8 @@ class EpubBuilder
         require $this->base_directory_path.'libs'.DIRECTORY_SEPARATOR.'Driver'.DIRECTORY_SEPARATOR.'Common.php';
     }
     /* ----------------------------------------- */
-    
-    
+
+
     /**
      * +-- Singleton化
      *
@@ -386,7 +386,7 @@ class EpubBuilderException extends exception
      * @var         any
      */
     const CODE_DRIVER = 2000;
-    
+
 
     /**
      * ドライバから発行されるエラー
@@ -394,14 +394,14 @@ class EpubBuilderException extends exception
      * @var         any
      */
     const CODE_ECECUTER = 2001;
-    
+
     /**
      * 初期化時に発行されるエラー
      *
      * @var         any
      */
     const CODE_INIT   = 5000;
-    
+
     /**
      * システム規定に関するエラー
      *
