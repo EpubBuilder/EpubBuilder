@@ -1,0 +1,32 @@
+/* this was a part of chap03.xhtml as an inline style specification for partial vertical rendering */
+/* now an independent stylesheet file for entire vertical writing mode content */
+/* abun@kobu.com 12/07/05 for japanese epub sample, edition 3 */
+* { line-height: 125%; }
+body {
+  writing-mode: vertical-rl;
+  -epub-writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  line-break: normal;
+  -epub-line-break: normal;
+  -webkit-line-break: normal;
+}
+span.tny {
+  writing-mode: horizontal-tb;
+  -epub-writing-mode: horizontal-tb;
+  -webkit-writing-mode: horizontal-tb;
+}
+span.tny2 {
+  text-combine: horizontal;
+  -epub-text-combine: horizontal;
+  -webkit-text-combine: horizontal;
+}
+span.emph {
+  text-emphasis-style: dot;
+  -epub-text-emphasis-style: dot;
+  -webkit-text-emphasis-style: dot;
+}
+
+/* from stylesheet for horizontal rendering (yoko) */
+body { margin-left: 5%; margin-right: 5%; margin-top: 5%; margin-bottom: 5%; text-align: left }
+th, td { padding: 0.1em 0.2em; background: lightgrey; }
+th { white-space: nowrap; }
